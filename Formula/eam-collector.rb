@@ -5,13 +5,13 @@
 class EamCollector < Formula
   desc "AI usage collector agent for Enterprise Agent Management"
   homepage "https://github.com/AutobahnSecurity/eam-collector"
-  version "0.3.0"
+  version "0.3.1"
   license "Proprietary"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/AutobahnSecurity/eam-collector/releases/download/v0.3.0/eam-collector-0.3.0-darwin-amd64.tar.gz"
-      sha256 "1574a63a7bdc3d0b02e8252497bbced4697c9acf047663eb546f18bac779e0ae"
+      url "https://github.com/AutobahnSecurity/eam-collector/releases/download/v0.3.1/eam-collector-0.3.1-darwin-amd64.tar.gz"
+      sha256 "47879c23d80a4ffc125f508b9ef3e96cca3ba53df522fe549e06a6d6b37cc4c6"
 
       define_method(:install) do
         bin.install "eam-collector"
@@ -20,8 +20,8 @@ class EamCollector < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/AutobahnSecurity/eam-collector/releases/download/v0.3.0/eam-collector-0.3.0-darwin-arm64.tar.gz"
-      sha256 "be7f4c90fed3b47ba653c2fc8897f9cd9fd323a9cd127dd318c675d4c95f3b22"
+      url "https://github.com/AutobahnSecurity/eam-collector/releases/download/v0.3.1/eam-collector-0.3.1-darwin-arm64.tar.gz"
+      sha256 "cf7350d6e05fd75966f9090094d46f14693f0d9b63619452784f7cc8386d7fa4"
 
       define_method(:install) do
         bin.install "eam-collector"
@@ -33,8 +33,8 @@ class EamCollector < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/AutobahnSecurity/eam-collector/releases/download/v0.3.0/eam-collector-0.3.0-linux-amd64.tar.gz"
-      sha256 "88c5151e03328bcb88de30f90f3cb1faaa1b67be5b74d24b19f4fdd31458f7e1"
+      url "https://github.com/AutobahnSecurity/eam-collector/releases/download/v0.3.1/eam-collector-0.3.1-linux-amd64.tar.gz"
+      sha256 "2e508b73f3b5ee64fff96b54ada00e94949cf629f2843910bd22d728c80ea352"
       define_method(:install) do
         bin.install "eam-collector"
         (etc/"eam-collector").mkpath
@@ -42,8 +42,8 @@ class EamCollector < Formula
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/AutobahnSecurity/eam-collector/releases/download/v0.3.0/eam-collector-0.3.0-linux-arm64.tar.gz"
-      sha256 "edeeb41ae322753c6b290e7abb930048b2e35afb2a748c7c71591d825e02621f"
+      url "https://github.com/AutobahnSecurity/eam-collector/releases/download/v0.3.1/eam-collector-0.3.1-linux-arm64.tar.gz"
+      sha256 "c02845d0bd5ca530a0b5581eeb5a2026c2e9abc69220a0d34e0af87e0c42d6f2"
       define_method(:install) do
         bin.install "eam-collector"
         (etc/"eam-collector").mkpath
